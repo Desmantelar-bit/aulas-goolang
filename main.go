@@ -2,15 +2,15 @@ package main
 
 import "fmt"
 
-func main(){
-	a, b := 10, 3
-		fmt.Println("A soma é:", a+b)
-		fmt.Println("A subtração é:", a-b)
-		fmt.Println("A multiplicação é:", a*b)
-		fmt.Println("A divisão é:", a/b, "e o resto é:", a%b)
-	a++ // Pode-se fazer a++, a = a + 1 ou a += 1
-		fmt.Println("Incrementar valor à a:", a)
-	if a > 0 && b > 0 {
-		fmt.Println("A e B são positivos")
-	}
+func main() {
+	var numero1 float32
+	var numero2 float32
+	fmt.Println("Escreva o primeiro número:")
+	fmt.Scanln(&numero1)
+	fmt.Println("Escreva o segundo número:")
+	fmt.Scanln(&numero2)
+	fmt.Printf("Soma: %.2f\n", numero1+numero2)
+	fmt.Printf("Subtração: %.2f\n", numero1-numero2)
+	fmt.Printf("Multiplicação: %.2f\n", numero1*numero2)
+	fmt.Printf("Divisão: %.2f\n", numero1/numero2)
 }
