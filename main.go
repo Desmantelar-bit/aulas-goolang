@@ -22,6 +22,7 @@ func main() {
 		fmt.Scan(&depósito)
 			if depósito <= 0{
 				fmt.Println("Valor inválido!")
+				main ()
 			} else {
 				resultado = saldo + depósito
 				fmt.Print("Depósito de ", depósito," realizado com sucesso! Saldo atual: ",resultado)
@@ -29,11 +30,13 @@ func main() {
 		break
 	case 2:
 		fmt.Println("Digite o valor do saque:")
-		fmt.Scanln(&saque)
+		fmt.Scan(&saque)
 			if saque > saldo {
 				fmt.Println("Saldo insuficiente!")
+				main ()
 			} else if saque <= 0 {
 				fmt.Println("Valor inválido!")
+				main ()
 			}else{
 				resultado = saldo - saque
 				fmt.Print("Saque de ", saque," realizado com sucesso! Saldo atual: ",resultado)
@@ -44,7 +47,8 @@ func main() {
 		break
 	default:
 		fmt.Println("Opção inválida!")
-		return
+		fmt.Println("Escolha uma opção válida! Tente novamente.")
+		main ()
 
 }
 	fmt.Println("Obrigado por usar nosso banco!")
